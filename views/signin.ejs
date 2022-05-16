@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in</title>
+</head>
+<body>
+<div>Sign in page</div>
+    <div><a href="http://mydomain.dev">Main</a></div>
+    <div><a href="/signup">Sing up</a></div>
+    <div>
+        <form action="/signin" accept-charset="UTF-8" method="post">
+            <% if( invalid ) { %>
+                <div>Invalid email or password</div>
+            <% } %>
+            <input type="email" name="email" placeholder="Email" tabindex="1" value="<%= email %>" <%= invalid ? "" : "autofocus" %>>
+            <input type="password" name="password" placeholder="Password" tabindex="2" <%= invalid ? "autofocus" : "" %>>
+            <input type="submit" value="Sign in" tabindex="3">
+        </form>
+    </div>
+    <div><a href="/reset">Forgot password?</a></div>
+</body>
+</html>

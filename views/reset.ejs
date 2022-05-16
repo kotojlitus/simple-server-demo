@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset password</title>
+</head>
+<body>
+    <div>Reset password page</div>
+    <div><a href="http://mydomain.dev">Main</a></div>
+    <div>
+        <form action="/reset" accept-charset="UTF-8" method="post">
+            <% if( invalid ) { %>
+                <div>Invalid email</div>
+            <% } %>
+            <input type="email" name="email" placeholder="Your email" autofocus>
+            <input type="submit" value="Send email">
+        </form>
+    </div>
+</body>
+</html>

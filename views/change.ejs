@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change password</title>
+</head>
+<body>
+    <div>Change password page</div>
+    <div><a href="http://mydomain.dev">Main</a></div>
+    <div>Change password for <b><%= username %></b></div>
+    <div>
+        <form action="/change/<%= hash %>" accept-charset="UTF-8" method="post">
+            <% if( invalid ) { %>
+                <div>Invalid password</div>
+            <% } %>
+            <input type="password" name="password" placeholder="New password" autofocus>
+            <input type="password" name="password_confirmation" placeholder="Confirm new password">
+            <input type="submit" value="Change password">
+        </form>
+    </div>
+</body>
+</html>
